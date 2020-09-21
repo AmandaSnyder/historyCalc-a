@@ -72,10 +72,10 @@
           </form>
       </div>
       <div class="row">
-        <div id="zero" class="one column numButton">
+        <div id="zero" class="one column numButton" onclick="addInput('0')">
           0
         </div>
-        <div id="one" class="one column numButton">
+        <div id="one" class="one column numButton" onclick="addInput('1')">
           1
         </div>
         <div class="nine columns">
@@ -84,28 +84,28 @@
         
       </div>
       <div class="row">
-        <div id="two" class="one column numButton">
+        <div id="two" class="one column numButton" onclick="addInput('2')">
           2
         </div>
-        <div id="three" class="one column numButton">
+        <div id="three" class="one column numButton" onclick="addInput('3')">
           3
         </div>
-        <div id="add" class="one column offset-by-one numButton">
+        <div id="add" class="one column offset-by-one numButton" onclick="addInput('+')">
           +
         </div>
-        <div id="subtract" class="one column offset-by-one numButton">
+        <div id="subtract" class="one column offset-by-one numButton" onclick="addInput('-')">
           -
         </div>
-        <div id="multiply" class="one column offset-by-one numButton">
+        <div id="multiply" class="one column offset-by-one numButton" onclick="addInput('x')">
           x
         </div>
         
       </div>
       <div class="row">
-        <div id="four" class="one column numButton">
+        <div id="four" class="one column numButton" onclick="addInput('4')">
           4
         </div>
-        <div id="five" class="one column numButton">
+        <div id="five" class="one column numButton" onclick="addInput('5')">
           5
         </div>
         <div class="nine columns">
@@ -114,28 +114,28 @@
         
       </div>
       <div class="row">
-        <div id="six" class="one column numButton">
+        <div id="six" class="one column numButton" onclick="addInput('6')">
           6
         </div>
-        <div id="seven" class="one column numButton">
+        <div id="seven" class="one column numButton" onclick="addInput('7')">
           7
         </div>
-        <div id="divide" class="one column offset-by-one numButton">
+        <div id="divide" class="one column offset-by-one numButton" onclick="addInput('/')">
           /
         </div>
-        <div id="modulus" class="one column offset-by-one numButton">
+        <div id="modulus" class="one column offset-by-one numButton" onclick="addInput('%')">
           %
         </div>
-        <div id="powRaise" class="one column offset-by-one numButton">
+        <div id="powRaise" class="one column offset-by-one numButton" onclick="addInput('^')">
           ^
         </div>
         
       </div>
       <div class="row">
-        <div id="eight" class="one column numButton">
+        <div id="eight" class="one column numButton" onclick="addInput('8')">
           8
         </div>
-        <div id="nine" class="one column numButton">
+        <div id="nine" class="one column numButton" onclick="addInput('9')">
           9
         </div>
         <div class="eight columns">
@@ -144,12 +144,13 @@
       
       </div>
       <div class="row">
-          <button class="five columns offset-by-five history button-primary">
+          <button class="five columns offset-by-two history button-primary">
               Extend History? &#8650;
               <div class="panel">
                   <p>fill with JS and cookie/file IO</p>
               </div>
           </button>
+          <button class="one column offset-by-two button-primary" onclick="process()">Run</button>
       </div>
   </div>
   
