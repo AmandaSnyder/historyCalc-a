@@ -61,3 +61,11 @@ nav {
 .history:active, .history:hover {
     background-color: rgba(144,123,176,1);
 }
+
+.wip {
+    background-color: #bbb;
+    color: #eee;
+    border-color: #aaa;
+    font-variant: small-caps;
+}
+
