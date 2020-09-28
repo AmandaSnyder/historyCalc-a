@@ -68,7 +68,8 @@
  
       </div>
       <div class="row">
-          <div id="numericIO" class="eleven columns calc">test</div>
+          <div id="numericIO" class="nine columns calc">test</div>
+          <div id="answer" class="two columns calc">test</div>
       </div>
       <div class="row">
         <div id="zero" class="one column numButton">
@@ -146,13 +147,7 @@
       
       </div>
       <div class="row">
-          <button class="five columns offset-by-two history button-primary">
-              Extend History? &#8650;
-              <div class="panel">
-                  <p>fill with JS and cookie/file IO</p>
-              </div>
-          </button>
-          <button class="one column offset-by-two button-primary">Run</button>
+          <button id="runCalc" class="one column offset-by-two button-primary">Run</button>
       </div>
   </div>
   
@@ -181,14 +176,14 @@
         var power = document.getElementById("powRaise");
         var decimal = document.getElementById("decimal");
         var modulus = document.getElementById("modulus"); //implement later
-        
-        let re = new RegExp("/[x\+\-\/\^\.]/g"); //replace regular expression to accomodate spaces and new chars
+        var runCalc = document.getElementById("runCalc");
+        var answer = document.getElementById("answer");
         
         //var wip = document.getElementsByClassName("wip");
 
         //event listeners
-        clear.addEventListener("click", clearInput());
-        clear.addEventListener("click", updateInput());
+        clear.addEventListener("click", clearInput);
+        clear.addEventListener("click", updateInput);
         zero.addEventListener("click",function(){ addInput("0");});
         zero.addEventListener("click", updateInput);
         one.addEventListener("click",function(){ addInput("1");});;
@@ -221,6 +216,8 @@
         power.addEventListener("click", updateInput);
         decimal.addEventListener("click",function(){ addInput(".");});
         decimal.addEventListener("click", updateInput);
+        runCalc.addEventListener("click", processInput);
+        
         
         //wip.addEventListener("focus", function() {wip.innerHTML = "unavailable";});
         
@@ -237,13 +234,11 @@
             document.getElementById("numericIO").innerHTML = inp;
         };
         function processInput() {
-            console.log("Input is: " + inp);
-            inp.trim();
-            inpArray = inp.split(re);
-            console.log(inpArray);
-            //for each piece in inpArray, use .replace to clean off excess operators
+            answer.innerHTML = eval(inp);
+        };
+        
+            //for each piece in inpArray, use .replace to clean off excess operators. Implement if keyboard input comes back
             
-        }
   </script>
 
 <!-- End Document
