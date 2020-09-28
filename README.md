@@ -4,9 +4,9 @@ This is the main project for IT 5236. It's a calculator. It is named historyCalc
 To be implemented:
 
 Immediate Goals:
--keyboard based input
--parse input strings for mathematical expressions
--display output
+-center text in divs and buttons
+-remove debugging window.alert()s
+-make unimplemented functions display the text "WIP" upon hover, then go back to their original text when no longer hovered over.
 
 Stretch Goals:
 -save and load history with text files
