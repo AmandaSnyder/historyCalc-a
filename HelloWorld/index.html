@@ -53,23 +53,17 @@
   </nav>
   <div class="container calc">
       <div class="row">
-          <div class="three columns wip">
-              History Options
+          <div class="three columns">
+              Options: 
           </div>
-          <button id="histSave" class="two columns offset-by-two wip">
-              Save
-          </button>
-          <button id="histLoad" class="two columns wip">
-              Load
-          </button>
           <button id="clear" class="two columns">
               Clear
           </button>
  
       </div>
       <div class="row">
-          <div id="numericIO" class="nine columns calc">test</div>
-          <div id="answer" class="two columns calc">test</div>
+          <div id="numericIO" class="nine columns calc">ready</div>
+          <div id="answer" class="two columns calc">ready</div>
       </div>
       <div class="row">
         <div id="zero" class="one column numButton">
@@ -224,11 +218,12 @@
         //functions
         function clearInput() {
             inp = "";
-            window.alert("Ready for fresh input!");
+            answer.innerHTML = "ready";
+            //window.alert("Ready for fresh input!");
         };
         function addInput(c) {
         inp = inp + c;
-        window.alert(inp);
+        //window.alert(inp);
         };
         function updateInput() {
             document.getElementById("numericIO").innerHTML = inp;
