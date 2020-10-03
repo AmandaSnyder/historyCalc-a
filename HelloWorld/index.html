@@ -202,11 +202,11 @@
         add.addEventListener("click", updateInput);
         subtract.addEventListener("click",function(){ addInput(" - ");});
         subtract.addEventListener("click", updateInput);
-        multiply.addEventListener("click",function(){ addInput(" x ");});
+        multiply.addEventListener("click",function(){ addInput(" * ");});
         multiply.addEventListener("click", updateInput);
         divide.addEventListener("click",function(){ addInput(" / ");});
         divide.addEventListener("click", updateInput);
-        power.addEventListener("click",function(){ addInput(" ^ ");});
+        power.addEventListener("click",function(){ addInput(" ** ");});
         power.addEventListener("click", updateInput);
         decimal.addEventListener("click",function(){ addInput(".");});
         decimal.addEventListener("click", updateInput);
@@ -229,7 +229,18 @@
             document.getElementById("numericIO").innerHTML = inp;
         };
         function processInput() {
-            answer.innerHTML = eval(inp);
+            
+                    //turn inpPcs[lBound] to inpPcs[rBound] into string
+                    //if final operator is "-" then remove all operators between it and the first one. else remove all operators after the first one
+               //perhaps there's a better way to do this within the string itself with reg expressions? check into it
+           var firstInd = inp.search(/\D/);
+           firstInd += 1;
+           var first = inp.charAt(firstInd);
+           inp = inp.replace(/\D+ * [+*/]/g, first);
+           
+           answer.innerHTML = eval(inp);
+           
+            
         };
         
             //for each piece in inpArray, use .replace to clean off excess operators. Implement if keyboard input comes back
