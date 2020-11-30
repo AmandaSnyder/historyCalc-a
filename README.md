@@ -1,4 +1,6 @@
 # historyCalc
+<b>This repository has been ARCHIVED. The code will be gone over, cleaned up, and moved to a new repository. The new repository will be linked here when finished.</b>
+
 This is the main project for IT 5236. It's a calculator. It is named historyCalc because being able to file i/o for operation history is a stretch goal for it.
 
 To be implemented:
